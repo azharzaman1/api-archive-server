@@ -1,6 +1,6 @@
 export const allowedOrigins = [
   "http://localhost:3000",
-  "https://api-application.vercel.app",
+  "https://api-archive-client.vercel.app",
 ];
 
 export const corOptions = {
