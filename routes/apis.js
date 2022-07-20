@@ -15,7 +15,11 @@ apisRouter.get("/sync", syncAPIsInMongoDB);
 
 apisRouter.get("/:id", getAPIById);
 
-apisRouter.get("/", paginatedResults(API), getAllAPIs);
+apisRouter.get(
+  "/",
+  paginatedResults(API, "API Slug Link Description Category HTTPS Cors Auth"),
+  getAllAPIs
+);
 
 apisRouter.post("/many", getManyAPIs);
 

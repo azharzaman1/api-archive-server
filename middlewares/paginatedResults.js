@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-export const paginatedResults = (Model) => {
+export const paginatedResults = (Model, select) => {
   return async (req, res, next) => {
     const page = parseInt(req.query?.page); // page no - from request
     const limit = parseInt(req.query?.limit); // max entries per page - from request
@@ -20,7 +20,7 @@ export const paginatedResults = (Model) => {
         })
           .limit(limit)
           .skip(skipIndex)
-          .select("API Slug Link Description Category")
+          .select(select)
           .exec();
 
         Model.countDocuments(

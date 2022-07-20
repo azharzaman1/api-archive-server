@@ -28,7 +28,7 @@ export const getManyAPIs = async (req, res) => {
   try {
     const result = await API.find({
       _id: { $in: ids },
-    }).select("API Slug Link Description Category");
+    }).select("API Slug Link Description Category Auth HTTPS Cors");
 
     if (!result) {
       res.statusMessage = "Nothing Found";
@@ -46,7 +46,7 @@ export const getAPIById = async (req, res) => {
   const id = req.params.id;
   try {
     const found = await API.findById(id)
-      .select("API Slug Link Description Category")
+      .select("API Slug Link Description Category Auth HTTPS Cors")
       .exec();
     if (!found) {
       res.statusMessage = "Data Found";
