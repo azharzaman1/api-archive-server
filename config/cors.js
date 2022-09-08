@@ -2,6 +2,7 @@ export const allowedOrigins = [
   "http://localhost:3000",
   "https://api-archive.vercel.app",
   "https://apiarchive.azharzaman.com",
+  "https://apiarchive-kamran.vercel.app",
 ];
 
 export const corOptions = {
